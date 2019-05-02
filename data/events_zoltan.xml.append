@@ -1,0 +1,6 @@
+<mod:findName type="event" name="STORE_ZOLTAN">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>

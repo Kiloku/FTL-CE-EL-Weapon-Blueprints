@@ -1,0 +1,6 @@
+<mod:findName type="event" name="DOWNLOAD_DRONE_DATA">
+    <mod-append:event>
+      <text>You download some weapon's blueprint data.</text>
+	  <event load="BP_RANDOM_WEAPON"/>
+    </mod-append:event>  
+</mod:findName>

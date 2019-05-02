@@ -1,0 +1,3073 @@
+
+<textList name="BP_WEAPONS_BUILDER_CHOICE_TEXT_BAD">
+	<text>Hire "Glurgh's Workshop" (low price)</text>
+	<text>Hire "Discounter's Forge" (low price)</text>
+	<text>Hire "Zap the prices!" (low price)</text>
+</textList>
+
+<textList name="BP_WEAPONS_BUILDER_CHOICE_TEXT_REG">
+	<text>Hire "PowerLoad Mechanics" (medium price)</text>
+	<text>Hire "General Astromechanics" (medium price)</text>
+	<text>Hire "Warfare Hardware Team" (medium price)</text>
+</textList>
+
+<textList name="BP_WEAPONS_BUILDER_CHOICE_TEXT_GOOD">
+	<text>Hire "Interstella5555 Engineering Co." (high price)</text>
+	<text>Hire "Advanced Energy Systems Ltd." (high price)</text>
+	<text>Hire "Astro Engineering Galactic" (high price)</text>
+</textList>	
+
+<event name="BP_WEAPONS_BUILDER_CHOICE">
+	<text>You dock to check out the engineering corporations aboard the trade hub. This will take a while.</text>
+	<choice hidden="true">
+		<text load="BP_WEAPONS_BUILDER_CHOICE_TEXT_BAD"/>
+		<event load="BP_WEAPONS_BAD"/>
+	</choice>
+	<choice hidden="true">
+		<text load="BP_WEAPONS_BUILDER_CHOICE_TEXT_REG"/>
+		<event load="BP_WEAPONS_REG"/>
+	</choice>
+	<choice hidden="true">
+		<text load="BP_WEAPONS_BUILDER_CHOICE_TEXT_GOOD"/>
+		<event load="BP_WEAPONS_GOOD"/>
+	</choice>
+	<choice hidden="true">
+		<text>Give up on building a weapon.</text>
+		<event/>
+	</choice>
+		<!--<choice hidden="true" req="engi">
+			<text>Have your Engi crewmember do the job for you instead (low price)</text>
+			<event load="BP_WEAPONS_LIST_ENGI"/>
+		</choice>
+		<choice hidden="true" req="energy">
+			<text>Have your Zoltan crewmember do the job for you instead (medium price)</text>
+			<event load="BP_WEAPONS_LIST_ZOLTAN"/>
+		</choice>
+		<choice hidden="true" req="slug">
+			<text>Have your Slug crewmember do the job for you instead (high price)</text>
+			<event load="BP_WEAPONS_LIST_SLUG"/>
+		</choice>
+		<choice>
+			<text>Check for other options from your crew.</text>
+			<event>
+				<text>You take a walk around the ship and see who else can work with weapons.</text>
+				<choice hidden="true" req="rock">
+					<text>(Rock Crew) Have your Rock crewmember do the job for you instead.</text>
+					<event load="BP_WEAPONS_LIST_ROCK"/>					
+				</choice>
+				<choice hidden="true" req="crystal">
+					<text>(Crystal Crew) Have your Crystal crewmember do the job for you instead.</text>
+					<event load="BP_WEAPONS_LIST_CRYSTAL"/>
+				</choice>
+				<choice hidden="true"> 
+					<text>Go back.</text>
+					<event load="BP_WEAPONS_BUILDER_CHOICE"/>
+				</choice>
+				<choice>
+					<text>Give up on building a weapon.</text>
+				</choice>
+			</event>
+		</choice>-->
+</event>
+
+<eventList name="BP_WEAPONS_BAD">
+	<event>
+		<!-- Lasers -->
+		<text>You head to their workshop. The place smells terrible, and the Mantis who answers at the door is obviously on drugs. "Whatchu want?" he asks.</text>
+		<choice req="BPW_BURST_LASER_II" hidden="true">
+			<text>Build a Burst Laser II weapon from the blueprint (about 50 scrap)</text>			
+			<event load="BP_BURST_LASER_II_REWARD_BAD"/>
+		</choice>		
+		<choice req="BPW_AUTO_LASER_II" hidden="true">
+			<text>Build an Auto Laser II weapon from the blueprint (about 45 scrap)</text>			
+			<event load="BP_AUTO_LASER_II_REWARD_BAD"/>
+		</choice>		
+		<choice req="BPW_ARTILLERY_LASER_I" hidden="true">
+			<text>Build an Artillery Laser I weapon from the blueprint (about 30 scrap)</text>			
+			<event load="BP_ARTILLERY_LASER_I_REWARD_BAD"/>
+		</choice>
+		<!-- Ions -->
+		<choice req="BPW_HEAVY_ION_II" hidden="true">
+			<text>Build a Heavy Ion II weapon from the blueprint (about 20 scrap)</text>			
+			<event load="BP_HEAVY_ION_II_REWARD_BAD"/>
+		</choice>
+		<choice req="BPW_ION_BLAST" hidden="true">
+			<text>Build an Ion Blast weapon from the blueprint (about 10 scrap)</text>			
+			<event load="BP_ION_BLAST_REWARD_BAD"/>
+		</choice>
+		<!-- Missiles and Bombs -->
+		<choice req="BPW_SMALL_BOMB" hidden="true">
+			<text>Build a Small Bomb weapon from the blueprint (about 15 scrap)</text>			
+			<event load="BP_SMALL_BOMB_REWARD_BAD"/>
+		</choice>
+		<choice req="BPW_PERYTON_MISSILE" hidden="true">
+			<text>Build a Peryton Missile weapon from the blueprint (about 15 scrap)</text>			
+			<event load="BP_PERYTON_MISSILE_REWARD_BAD"/>
+		</choice>
+		<choice req="BPW_HULL_MISSILE_I" hidden="true">
+			<text>Build a Hull Missile I weapon from the blueprint (about 10 scrap)</text>			
+			<event load="BP_HULL_MISSILE_I_REWARD_BAD"/>
+		</choice>
+		<!-- Beams -->
+		<choice req="BPW_PERNACH" hidden="true">
+			<text>Build a Pernach Beam weapon from the blueprint (about 20 scrap)</text>			
+			<event load="BP_PERNACH_REWARD_BAD"/>
+		</choice>
+		<choice req="BPW_BARDICHE" hidden="true">
+			<text>Build a Bardiche Beam weapon from the blueprint (about 30 scrap)</text>			
+			<event load="BP_BARDICHE_REWARD_BAD"/>
+		</choice>
+		<choice req="BPW_PIKE" hidden="true">
+			<text>Build a Pike Beam weapon from the blueprint (about 25 scrap)</text>			
+			<event load="BP_PIKE_REWARD_BAD"/>
+		</choice>
+		<!-- Special -->
+		<choice req="BPW_EFFECTOR_II" hidden="true">
+			<text>Build an Effector II weapon from the blueprint (about 30 scrap)</text>			
+			<event load="BP_EFFECTOR_II_REWARD_BAD"/>
+		</choice>
+		<choice hidden="true">
+			<text>Give up on building a weapon.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+
+<eventList name="BP_WEAPONS_REG">
+	<event>
+		<text>This small Astro-Mechanics company is up and coming. They've not been in the market for long, but they seem professional. It's also a good value.</text>
+		<choice req="BPW_BURST_LASER_II" hidden="true">
+			<text>Build a Burst Laser II weapon from the blueprint (about 65 scrap)</text>			
+			<event load="BP_BURST_LASER_II_REWARD_REG"/>
+		</choice>		
+		<choice req="BPW_AUTO_LASER_II" hidden="true">
+			<text>Build an Auto Laser II weapon from the blueprint (about 60 scrap)</text>			
+			<event load="BP_AUTO_LASER_II_REWARD_REG"/>
+		</choice>		
+		<choice req="BPW_ARTILLERY_LASER_I" hidden="true">
+			<text>Build an Artillery Laser I weapon from the blueprint (about 50 scrap)</text>			
+			<event load="BP_ARTILLERY_LASER_I_REWARD_REG"/>
+		</choice>
+		<!-- Ions -->
+		<choice req="BPW_HEAVY_ION_II" hidden="true">
+			<text>Build a Heavy Ion II weapon from the blueprint (about 35 scrap)</text>			
+			<event load="BP_HEAVY_ION_II_REWARD_REG"/>
+		</choice>
+		<choice req="BPW_ION_BLAST" hidden="true">
+			<text>Build an Ion Blast weapon from the blueprint (about 20 scrap)</text>			
+			<event load="BP_ION_BLAST_REWARD_REG"/>
+		</choice>
+		<!-- Missiles and Bombs -->
+		<choice req="BPW_SMALL_BOMB" hidden="true">
+			<text>Build a Small Bomb weapon from the blueprint (about 30 scrap)</text>			
+			<event load="BP_SMALL_BOMB_REWARD_REG"/>
+		</choice>
+		<choice req="BPW_PERYTON_MISSILE" hidden="true">
+			<text>Build a Peryton Missile weapon from the blueprint (about 30 scrap)</text>			
+			<event load="BP_PERYTON_MISSILE_REWARD_REG"/>
+		</choice>
+		<choice req="BPW_HULL_MISSILE_I" hidden="true">
+			<text>Build a Hull Missile I weapon from the blueprint (about 20 scrap)</text>			
+			<event load="BP_HULL_MISSILE_I_REWARD_REG"/>
+		</choice>
+		<!-- Beams -->
+		<choice req="BPW_PERNACH" hidden="true">
+			<text>Build a Pernach Beam weapon from the blueprint (about 35 scrap)</text>			
+			<event load="BP_PERNACH_REWARD_REG"/>
+		</choice>
+		<choice req="BPW_BARDICHE" hidden="true">
+			<text>Build a Bardiche Beam weapon from the blueprint (about 45 scrap)</text>			
+			<event load="BP_BARDICHE_REWARD_REG"/>
+		</choice>
+		<choice req="BPW_PIKE" hidden="true">
+			<text>Build a Pike Beam weapon from the blueprint (about 40 scrap)</text>			
+			<event load="BP_PIKE_REWARD_REG"/>
+		</choice>
+		<!-- Special -->
+		<choice req="BPW_EFFECTOR_II" hidden="true">
+			<text>Build an Effector II weapon from the blueprint (about 45 scrap)</text>			
+			<event load="BP_EFFECTOR_II_REWARD_REG"/>
+		</choice>
+		<choice hidden="true">
+			<text>Give up on building a weapon.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+
+<eventList name="BP_WEAPONS_GOOD">
+	<event>
+		<text>This is the best you can find. The company's systems are mostly automated, everything is pristine, and you see that many other clients are having their stuff built at the same time. Hopefully it's worth the price.</text>
+		<choice req="BPW_BURST_LASER_II" hidden="true">
+			<text>Build a Burst Laser II weapon from the blueprint (about 80 scrap)</text>			
+			<event load="BP_BURST_LASER_II_REWARD_GOOD"/>
+		</choice>		
+		<choice req="BPW_AUTO_LASER_II" hidden="true">
+			<text>Build an Auto Laser II weapon from the blueprint (about 75 scrap)</text>			
+			<event load="BP_AUTO_LASER_II_REWARD_GOOD"/>
+		</choice>		
+		<choice req="BPW_ARTILLERY_LASER_I" hidden="true">
+			<text>Build an Artillery Laser I weapon from the blueprint (about 65 scrap)</text>			
+			<event load="BP_ARTILLERY_LASER_I_REWARD_GOOD"/>
+		</choice>
+		<!-- Ions -->
+		<choice req="BPW_HEAVY_ION_II" hidden="true">
+			<text>Build a Heavy Ion II weapon from the blueprint (about 50 scrap)</text>			
+			<event load="BP_HEAVY_ION_II_REWARD_GOOD"/>
+		</choice>
+		<choice req="BPW_ION_BLAST" hidden="true">
+			<text>Build an Ion Blast weapon from the blueprint (about 30 scrap)</text>			
+			<event load="BP_ION_BLAST_REWARD_GOOD"/>
+		</choice>
+		<!-- Missiles and Bombs -->
+		<choice req="BPW_SMALL_BOMB" hidden="true">
+			<text>Build a Small Bomb weapon from the blueprint (about 45 scrap)</text>			
+			<event load="BP_SMALL_BOMB_REWARD_GOOD"/>
+		</choice>
+		<choice req="BPW_PERYTON_MISSILE" hidden="true">
+			<text>Build a Peryton Missile weapon from the blueprint (about 45 scrap)</text>			
+			<event load="BP_PERYTON_MISSILE_REWARD_GOOD"/>
+		</choice>
+		<choice req="BPW_HULL_MISSILE_I" hidden="true">
+			<text>Build a Hull Missile I weapon from the blueprint (about 30 scrap)</text>			
+			<event load="BP_HULL_MISSILE_I_REWARD_GOOD"/>
+		</choice>
+		<!-- Beams -->
+		<choice req="BPW_PERNACH" hidden="true">
+			<text>Build a Pernach Beam weapon from the blueprint (about 50 scrap)</text>			
+			<event load="BP_PERNACH_REWARD_GOOD"/>
+		</choice>
+		<choice req="BPW_BARDICHE" hidden="true">
+			<text>Build a Bardiche Beam weapon from the blueprint (about 60 scrap)</text>			
+			<event load="BP_BARDICHE_REWARD_GOOD"/>
+		</choice>
+		<choice req="BPW_PIKE" hidden="true">
+			<text>Build a Pike Beam weapon from the blueprint (about 55 scrap)</text>			
+			<event load="BP_PIKE_REWARD_GOOD"/>
+		</choice>
+		<!-- Special -->
+		<choice req="BPW_EFFECTOR_II" hidden="true">
+			<text>Build an Effector II weapon from the blueprint (about 60 scrap)</text>			
+			<event load="BP_EFFECTOR_II_REWARD_GOOD"/>
+		</choice>
+		<choice hidden="true">
+			<text>Give up on building a weapon.</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+
+
+<!-- Lasers -->
+<!--   BL II   -->
+<eventList name="BP_BURST_LASER_II_REWARD_BAD">
+	<event>
+		<text>The strange one-eyed humanoid who spent a few hours hunched over with his tools brings your new weapon in an old crate. It looks... Wrong. This didn't work out so well, but you have to pay.</text>
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3_SUBSTANDARD"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>They get the blueprint set-up and start working. Their tools are unregulated and outdated, though, and they end up having to do many power inneficient work-arounds.</text>
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3_FAULTY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The building process is behind closed doors. After a while, you notice a smell of something burnt. This doesn't look good.</text>
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3_MALFUNCTIONING"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>The alien building your weapon is visibly shaking, probably collateral effect from drugs. He does the job, but nothing is quite well attached.</text>
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3_UNRELIABLE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The elderly human builder takes the blueprint from your hand, glances at it and exclaims "Bah! These new schematics are terrible. I'll build it the old fashioned way." Before you can stop him he throws the blueprint away.</text>
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3_OUTDATED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with delivery uniform brings a crate to your ship, it's your new weapon. You deposit the money in the workshop's account.</text>
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_BURST_LASER_II_REWARD_REG">
+	<event>
+		<text>A computer takes your blueprint and aids the chief-mechanic in the construction process. After some hours, you get your weapon.</text>
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-67" max="-63"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A young engineer supervises the work. She seems really glad to get to work on a bigger project for once. After some time, you get your new weapon.</text>
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-67" max="-63"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with a delivery uniform brings a crate to your ship, it's your new weapon. You transfer over the scrap.</text>		
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-67" max="-63"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The blueprint is taken inside and the building process starts. The worker team has people from many species, and they tick together like clockwork. The weapon is built better than the required specifications.</text>
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-67" max="-63"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3_VOLATILE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the engineers are system overheating enthusiasts. They add custom-built heatsinks to the project, allowing for higher-temperature blasts.</text>
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-67" max="-63"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3_INCENDIARY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The team is supervised by a master weapons builder. He's been in the trade for a very long time, and knows intricacies that even the weapon's original designers wouldn't notice. The work is very well done.</text>
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-67" max="-63"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An "Advanced Power Generation Technology" student requests to aid in the job, so that he can use the data for his End-of-Term project. He offers to pay for some of the job too. (Cost reduced by 5 scrap)</text>
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>A Zoltan is project leader, and he notices the schematics are outdated on what the current rules-of-engagement laws permit. The energy being calibrates the weapon to have a more coherent blast, avoiding damage to living beings. At least it's cheaper (Cost reduced by 5 scrap)</text>
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3_SAFE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the Rock mechanics working on the project know a trick that speeds up the shots and avoid loss of coherence when hitting the target, causing a penetrating blow.</text>
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-67" max="-63"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3_PENETRATING"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_BURST_LASER_II_REWARD_GOOD">
+	<event>
+		<text>The entire process is automated, and your weapon is built with top-of-the line parts. Surely worth the price!</text>
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-78" max="-82"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The chief engineer seems interested in your project, and decides to tone down on the automation to work on it himself, with the help of a few of his students. It's nearly perfect.</text>
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-78" max="-82"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3_CUSTOM"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>The assembly line's computer has incredible energy routing schematics, and your weapon is built to great power efficiency standards.</text>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3_OPTIMIZED"/>
+		<modifyPursuit amount="1"/>
+	</event>-->
+	<event>
+		<text>The engineers have used some new, experimental capacitors that charge way faster, allowing the weapon to charge up more quickly.</text>
+		<remove name="BPW_BURST_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-78" max="-82"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An elderly Engi (do Engi age?) decides your project deserves his special attention. He is an old master, and coordinates the project focusing on a quicker charging weapon.</text>
+		<item_modify>
+			<item type="scrap" min="-78" max="-82"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3_ADVANCED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A Mantis engineer! And you thought you had seen everything. He changes the energy pattern from the default one on the blueprint, making the blasts more damaging to the targets hull.</text>
+		<item_modify>
+			<item type="scrap" min="-78" max="-82"/>
+		</item_modify>
+		<weapon name="LASER_BURST_3_HULL_RIPPER"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</event>
+<!-- end BL II -->
+
+<!-- Auto Laser 2 -->
+<eventList name="BP_AUTO_LASER_II_REWARD_BAD">
+	<event>
+		<text>The strange one-eyed humanoid who spent a few hours hunched over with his tools brings your new weapon in an old crate. It looks... Wrong. This didn't work out so well, but you have to pay.</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_SUBSTANDARD"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>They get the blueprint set-up and start working. Their tools are unregulated and outdated, though, and they end up having to do many power inneficient work-arounds.</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_FAULTY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>The building process is behind closed doors. After a while, you notice a smell of something burnt. This doesn't look good.</text>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_MALFUNCTIONING"/>
+		<modifyPursuit amount="1"/>
+	</event>	-->
+	<event>
+		<text>The alien building your weapon is visibly shaking, probably collateral effect from drugs. He does the job, but nothing is quite well attached.</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_UNRELIABLE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The elderly human builder takes the blueprint from your hand, glances at it and exclaims "Bah! These new schematics are terrible. I'll build it the old fashioned way." Before you can stop him he throws the blueprint away.</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_OUTDATED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with delivery uniform brings a crate to your ship, it's your new weapon. You deposit the money in the workshop's account.</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_AUTO_LASER_II_REWARD_REG">
+	<event>
+		<text>A computer takes your blueprint and aids the chief-mechanic in the construction process. After some hours, you get your weapon.</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A young engineer supervises the work. She seems really glad to get to work on a bigger project for once. After some time, you get your new weapon.]</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with a delivery uniform brings a crate to your ship, it's your new weapon. You transfer over the scrap.</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The blueprint is taken inside and the building process starts. The worker team has people from many species, and they tick together like clockwork. The weapon is built better than the required specifications.</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_VOLATILE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the engineers are system overheating enthusiasts. They add custom-built heatsinks to the project, allowing for higher-temperature blasts.</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_INCENDIARY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The team is supervised by a master weapons builder. He's been in the trade for a very long time, and knows intricacies that even the weapon's original designers wouldn't notice. The work is very well done.</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An "Advanced Power Generation Technology" student requests to aid in the job, so that he can use the data for his End-of-Term project. He offers to pay for some of the job too. (Cost reduced by 3 scrap)</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-59" max="-55"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>A Zoltan is project leader, and he notices the schematics are outdated on what the current rules-of-engagement laws permit. The energy being calibrates the weapon to have a more coherent blast, avoiding damage to living beings. At least it's cheaper (Cost reduced by 5 scrap)</text>
+		<item_modify>
+			<item type="scrap" min="-58" max="-54"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_SAFE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the Rock mechanics working on the project know a trick that speeds up the shots and avoid loss of coherence when hitting the target, causing a penetrating blow.</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_PENETRATING"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_AUTO_LASER_II_REWARD_GOOD">
+	<event>
+		<text>The entire process is automated, and your weapon is built with top-of-the line parts. Surely worth the price!</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-73" max="-78"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The chief engineer seems interested in your project, and decides to tone down on the automation to work on it himself, with the help of a few of his students. It's nearly perfect.</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-73" max="-78"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_CUSTOM"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The assembly line's computer has incredible energy routing schematics, and your weapon is built to great power efficiency standards.</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-73" max="-78"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_OPTIMIZED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The engineers have used some new, experimental capacitors that charge way faster, allowing the weapon to charge up more quickly.</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-73" max="-78"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An elderly Engi (do Engi age?) decides your project deserves his special attention. He is an old master, and coordinates the project focusing on a quicker charging weapon.</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-73" max="-78"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_ADVANCED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A Mantis engineer! And you thought you had seen everything. He changes the energy pattern from the default one on the blueprint, making the blasts more damaging to the targets hull.</text>
+		<remove name="BPW_AUTO_LASER_II"/>
+		<item_modify>
+			<item type="scrap" min="-73" max="-78"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_HULL_RIPPER"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</event>
+<!-- end Auto Laser 2 -->
+
+<!-- Artillery Laser 1 -->
+<eventList name="BP_ARTILLERY_LASER_I_REWARD_BAD">
+	<event>
+		<text>The strange one-eyed humanoid who spent a few hours hunched over with his tools brings your new weapon in an old crate. It looks... Wrong. This didn't work out so well, but you have to pay.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_SUBSTANDARD"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>They get the blueprint set-up and start working. Their tools are unregulated and outdated, though, and they end up having to do many power inneficient work-arounds.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_FAULTY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The group of mechanics do their job, but pick out the worst parts to save scrap. The shot won't form well, shields will be able to deflect it more easily.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_LOW_ENERGY"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>The alien building your weapon is visibly shaking, probably collateral effect from drugs. He does the job, but nothing is quite well attached.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_UNRELIABLE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The elderly human builder takes the blueprint from your hand, glances at it and exclaims "Bah! These new schematics are terrible. I'll build it the old fashioned way." Before you can stop him he throws the blueprint away.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_OUTDATED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with delivery uniform brings a crate to your ship, it's your new weapon. You deposit the money in the workshop's account.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_ARTILLERY_LASER_I_REWARD_REG">
+	<event>
+		<text>A computer takes your blueprint and aids the chief-mechanic in the construction process. After some hours, you get your weapon.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-67" max="-63"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A young engineer supervises the work. She seems really glad to get to work on a bigger project for once. After some time, you get your new weapon.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-67" max="-63"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with a delivery uniform brings a crate to your ship, it's your new weapon. You transfer over the scrap.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-67" max="-63"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The blueprint is taken inside and the building process starts. The worker team has people from many species, and they tick together like clockwork. The weapon is built better than the required specifications.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_VOLATILE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the engineers are system overheating enthusiasts. They add custom-built heatsinks to the project, allowing for higher-temperature blasts.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-67" max="-63"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_INCENDIARY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The team is supervised by a master weapons builder. He's been in the trade for a very long time, and knows intricacies that even the weapon's original designers wouldn't notice. The work is very well done.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-67" max="-63"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An "Advanced Power Generation Technology" student requests to aid in the job, so that he can use the data for his End-of-Term project. He offers to pay for some of the job too. (Cost reduced by 3 scrap)</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-65" max="-60"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>A Zoltan is project leader, and he notices the schematics are outdated on what the current rules-of-engagement laws permit. The energy being calibrates the weapon to have a more coherent blast, avoiding damage to living beings. At least it's cheaper (Cost reduced by 5 scrap)</text>		
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-64" max="-59"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_SAFE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the Rock mechanics working on the project know a trick that speeds up the shots and avoid loss of coherence when hitting the target, causing a penetrating blow.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-67" max="-63"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_PENETRATING"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A retired military engineer explains to you that he can make your Artillery Laser more useful as a tactical weapon, instead of raw brute force. He calibrates the system to a setting that generates a more contained blast, which greatly damages subsystem but isn't as powerful against hull or crew.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-67" max="-63"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_TACTICAL"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_ARTILLERY_LASER_I_REWARD_GOOD">
+	<event>
+		<text>The entire process is automated, and your weapon is built with top-of-the line parts. Surely worth the price!</text>		
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-78" max="-82"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The chief engineer seems interested in your project, and decides to tone down on the automation to work on it himself, with the help of a few of his students. It's nearly perfect.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-78" max="-82"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_CUSTOM"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The assembly line's computer has incredible energy routing schematics, and your weapon is built to great power efficiency standards.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-78" max="-82"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_OPTIMIZED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The engineers have used some new, experimental capacitors that charge way faster, allowing the weapon to charge up more quickly.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-78" max="-82"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An elderly Engi (do Engi age?) decides your project deserves his special attention. He is an old master, and coordinates the project focusing on a quicker charging weapon.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-78" max="-82"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_ADVANCED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A Mantis engineer! And you thought you had seen everything. He changes the energy pattern from the default one on the blueprint, making the blasts more damaging to the targets hull.</text>
+		<remove name="BPW_ARTILLERY_LASER_I"/>
+		<item_modify>
+			<item type="scrap" min="-78" max="-82"/>
+		</item_modify>
+		<weapon name="BA_LASER_ARTILLERY_1_HULL_RIPPER"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</event>
+<!-- end Artillery Laser 1 -->
+<!-- end Lasers -->
+
+
+<!-- Ions -->
+<!-- Heavy Ion 2 -->
+<eventList name="BP_HEAVY_ION_II_REWARD_BAD">
+	<event>
+		<text>The strange one-eyed humanoid who spent a few hours hunched over with his tools brings your new weapon in an old crate. It looks... Wrong. This didn't work out so well, but you have to pay.</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_SUBSTANDARD"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>They get the blueprint set-up and start working. Their tools are unregulated and outdated, though, and they end up having to do many power inneficient work-arounds.</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_FAULTY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>The building process is behind closed doors. After a while, you notice a smell of something burnt. This doesn't look good.</text>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_MALFUNCTIONING"/>
+		<modifyPursuit amount="1"/>
+	</event>	-->
+	<event>
+		<text>The alien building your weapon is visibly shaking, probably collateral effect from drugs. He does the job, but nothing is quite well attached.</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_UNRELIABLE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The elderly human builder takes the blueprint from your hand, glances at it and exclaims "Bah! These new schematics are terrible. I'll build it the old fashioned way." Before you can stop him he throws the blueprint away.</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_OUTDATED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with delivery uniform brings a crate to your ship, it's your new weapon. You deposit the money in the workshop's account.</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_HEAVY_ION_II_REWARD_REG">
+	<event>
+		<text>A computer takes your blueprint and aids the chief-mechanic in the construction process. After some hours, you get your weapon.</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-37" max="-32"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A young engineer supervises the work. She seems really glad to get to work on a bigger project for once. After some time, you get your new weapon.</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-37" max="-32"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with a delivery uniform brings a crate to your ship, it's your new weapon. You transfer over the scrap.</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-37" max="-32"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The blueprint is taken inside and the building process starts. The worker team has people from many species, and they tick together like clockwork. The weapon is built better than the required specifications.</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-37" max="-32"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_VOLATILE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the engineers are system overheating enthusiasts. They add custom-built heatsinks to the project, allowing for higher-temperature blasts.</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-37" max="-32"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_INCENDIARY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The team is supervised by a master weapons builder. He's been in the trade for a very long time, and knows intricacies that even the weapon's original designers wouldn't notice. The work is very well done.</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-37" max="-32"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An "Advanced Power Generation Technology" student requests to aid in the job, so that he can use the data for his End-of-Term project. He offers to pay for some of the job too. (Cost reduced by 3 scrap)</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-34" max="-29"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>A Zoltan is project leader, and he notices the schematics are outdated on what the current rules-of-engagement laws permit. The energy being calibrates the weapon to have a more coherent blast, avoiding damage to living beings. At least it's cheaper (Cost reduced by 5 scrap)</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-33" max="-28"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_SAFE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An engi worker offers to install an extra large capacitor, which will make the ion blasts more powerful. He didn't warn you that this takes more power, though.</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-37" max="-32"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_OVERCHARGED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_HEAVY_ION_II_REWARD_GOOD">
+	<event>
+		<text>The entire process is automated, and your weapon is built with top-of-the line parts. Surely worth the price!</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The chief engineer seems interested in your project, and decides to tone down on the automation to work on it himself, with the help of a few of his students. It's nearly perfect.</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_CUSTOM"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>The assembly line's computer has incredible energy routing schematics, and your weapon is built to great power efficiency standards.</text>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_OPTIMIZED"/>
+		<modifyPursuit amount="1"/>
+	</event>-->
+	<event>
+		<text>The engineers have used some new, experimental capacitors that charge way faster, allowing the weapon to charge up more quickly.</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An elderly Engi (do Engi age?) decides your project deserves his special attention. He is an old master, and coordinates the project focusing on a quicker charging weapon.</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_ADVANCED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The engineers asked to test a new type of actuator that will allow for burst shots at the cost of a bit of charging time. You decide to go through with it.</text>
+		<remove name="BPW_HEAVY_ION_II"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_REPEATER_HEAVY_ION"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</event>
+<!-- end Heavy Ion 2 -->
+
+<!-- Ion Blast -->
+<eventList name="BP_ION_BLAST_REWARD_BAD">
+	<event>
+		<text>The strange one-eyed humanoid who spent a few hours hunched over with his tools brings your new weapon in an old crate. It looks... Wrong. This didn't work out so well, but you have to pay.</text>
+		<remove name="BPW_ION_BLAST"/>
+		<item_modify>
+			<item type="scrap" min="-12" max="-8"/>
+		</item_modify>
+		<weapon name="ION_1_SUBSTANDARD"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>They get the blueprint set-up and start working. Their tools are unregulated and outdated, though, and they end up having to do many power inneficient work-arounds.</text>
+		<remove name="BPW_ION_BLAST"/>
+		<item_modify>
+			<item type="scrap" min="-12" max="-8"/>
+		</item_modify>
+		<weapon name="ION_1_FAULTY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>The building process is behind closed doors. After a while, you notice a smell of something burnt. This doesn't look good.</text>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_MALFUNCTIONING"/>
+		<modifyPursuit amount="1"/>
+	</event>	-->
+	<event>
+		<text>The alien building your weapon is visibly shaking, probably collateral effect from drugs. He does the job, but nothing is quite well attached.</text>
+		<remove name="BPW_ION_BLAST"/>
+		<item_modify>
+			<item type="scrap" min="-12" max="-8"/>
+		</item_modify>
+		<weapon name="ION_1_UNRELIABLE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The elderly human builder takes the blueprint from your hand, glances at it and exclaims "Bah! These new schematics are terrible. I'll build it the old fashioned way." Before you can stop him he throws the blueprint away.</text>
+		<remove name="BPW_ION_BLAST"/>
+		<item_modify>
+			<item type="scrap" min="-12" max="-8"/>
+		</item_modify>
+		<weapon name="ION_1_OUTDATED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with delivery uniform brings a crate to your ship, it's your new weapon. You deposit the money in the workshop's account.</text>
+		<remove name="BPW_ION_BLAST"/>
+		<item_modify>
+			<item type="scrap" min="-12" max="-8"/>
+		</item_modify>
+		<weapon name="ION_1"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_ION_BLAST_REWARD_REG">
+	<event>
+		<text>A computer takes your blueprint and aids the chief-mechanic in the construction process. After some hours, you get your weapon.</text>
+		<remove name="BPW_ION_BLAST"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="ION_1"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A young engineer supervises the work. She seems really glad to get to work on a bigger project for once. After some time, you get your new weapon.</text>
+		<remove name="BPW_ION_BLAST"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="ION_1"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with a delivery uniform brings a crate to your ship, it's your new weapon. You transfer over the scrap.</text>
+		<remove name="BPW_ION_BLAST"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="ION_1"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The blueprint is taken inside and the building process starts. The worker team has people from many species, and they tick together like clockwork. The weapon is built better than the required specifications.</text>
+		<remove name="BPW_ION_BLAST"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="ION_1_VOLATILE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the engineers are system overheating enthusiasts. They add custom-built heatsinks to the project, allowing for higher-temperature blasts.</text>
+		<remove name="BPW_ION_BLAST"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="ION_1_INCENDIARY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The team is supervised by a master weapons builder. He's been in the trade for a very long time, and knows intricacies that even the weapon's original designers wouldn't notice. The work is very well done.</text>
+		<remove name="BPW_ION_BLAST"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="ION_1_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An "Advanced Power Generation Technology" student requests to aid in the job, so that he can use the data for his End-of-Term project. He offers to pay for some of the job too. (Cost reduced by 3 scrap)</text>
+		<remove name="BPW_ION_BLAST"/>
+		<item_modify>
+			<item type="scrap" min="-19" max="-15"/>
+		</item_modify>
+		<weapon name="ION_1_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<!--<event>
+		<text>A Zoltan is project leader, and he notices the schematics are outdated on what the current rules-of-engagement laws permit. The energy being calibrates the weapon to have a more coherent blast, avoiding damage to living beings. At least it's cheaper (Cost reduced by 5 scrap)</text>
+		<item_modify>
+			<item type="scrap" min="-37" max="-33"/>
+		</item_modify>
+		<weapon name="ION_1_SAFE"/>
+		<modifyPursuit amount="1"/>
+	</event>-->
+	<event>
+		<text>An engi worker offers to install an extra large capacitor, which will make the ion blasts more powerful. He didn't warn you that this takes more power, though.</text>
+		<remove name="BPW_ION_BLAST"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="ION_1_OVERCHARGED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_ION_BLAST_REWARD_GOOD">
+	<event>
+		<text>The entire process is automated, and your weapon is built with top-of-the line parts. Surely worth the price!</text>
+		<remove name="BPW_ION_BLAST"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="ION_1_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The chief engineer seems interested in your project, and decides to tone down on the automation to work on it himself, with the help of a few of his students. It's nearly perfect.</text>
+		<remove name="BPW_ION_BLAST"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="ION_1_CUSTOM"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>The assembly line's computer has incredible energy routing schematics, and your weapon is built to great power efficiency standards.</text>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_OPTIMIZED"/>
+		<modifyPursuit amount="1"/>
+	</event>-->
+	<event>
+		<text>The engineers have used some new, experimental capacitors that charge way faster, allowing the weapon to charge up more quickly.</text>
+		<remove name="BPW_ION_BLAST"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="ION_1_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An elderly Engi (do Engi age?) decides your project deserves his special attention. He is an old master, and coordinates the project focusing on a quicker charging weapon.</text>
+		<remove name="BPW_ION_BLAST"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="ION_1_ADVANCED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>The engineers asked to test a new type of actuator that will allow for burst shots at the cost of a bit of charging time. You decide to go through with it.</text>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BA_ION_HEAVY_2_REPEATER_HEAVY_ION"/>
+		<modifyPursuit amount="1"/>
+	</event>-->
+</event>
+<!-- end Ion Blast -->
+<!-- end Ions -->
+
+
+<!-- Missiles and Bombs -->
+<!--   Small Bomb   -->
+<eventList name="BP_SMALL_BOMB_REWARD_BAD">
+	<event>
+		<text>The strange one-eyed humanoid who spent a few hours hunched over with his tools brings your new weapon in an old crate. It looks... Wrong. This didn't work out so well, but you have to pay.</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-17" max="-13"/>
+		</item_modify>
+		<weapon name="BOMB_1_SUBSTANDARD"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>They get the blueprint set-up and start working. Their tools are unregulated and outdated, though, and they end up having to do many power inneficient work-arounds.</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-17" max="-13"/>
+		</item_modify>
+		<weapon name="BOMB_1_FAULTY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The fabricator they installed takes twice the explosives, in a terribly inefficient design. You think you're being duped, but their Slug secretary assures you it's all good, as you sign the contract.</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-17" max="-13"/>
+		</item_modify>
+		<weapon name="BOMB_1_WASTEFUL"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>The human working on your weapon is absurdly lazy, skipping most testing and quality assurance steps. The bomb's primer is terribly calibrated, giving the enemy crew time to shield themselves.</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-17" max="-13"/>
+		</item_modify>
+		<weapon name="BOMB_1_PREDICTABLE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The elderly human builder takes the blueprint from your hand, glances at it and exclaims "Bah! These new schematics are terrible. I'll build it the old fashioned way." Before you can stop him he throws the blueprint away.</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-17" max="-13"/>
+		</item_modify>
+		<weapon name="BOMB_1_OUTDATED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with delivery uniform brings a crate to your ship, it's your new weapon. You deposit the money in the workshop's account.</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-17" max="-13"/>
+		</item_modify>
+		<weapon name="BOMB_1"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_SMALL_BOMB_REWARD_REG">
+	<event>
+		<text>A computer takes your blueprint and aids the chief-mechanic in the construction process. After some hours, you get your weapon.</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BOMB_1"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A young engineer supervises the work. She seems really glad to get to work on a bigger project for once. After some time, you get your new weapon.</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BOMB_1"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with a delivery uniform brings a crate to your ship, it's your new weapon. You transfer over the scrap.</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BOMB_1"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The blueprint is taken inside and the building process starts. The worker team has people from many species, and they tick together like clockwork. The weapon is built better than the required specifications.</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BOMB_1_VOLATILE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the engineers are system overheating enthusiasts. They add custom-built heatsinks to the project, allowing for higher-temperature blasts.</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BOMB_1_INCENDIARY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The team is supervised by a master weapons builder. He's been in the trade for a very long time, and knows intricacies that even the weapon's original designers wouldn't notice. The work is very well done.</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BOMB_1_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An "Advanced Power Generation Technology" student requests to aid in the job, so that he can use the data for his End-of-Term project. He offers to pay for some of the job too. (Cost reduced by 3 scrap)</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-29" max="-25"/>
+		</item_modify>
+		<weapon name="BOMB_1_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>A Zoltan is project leader, and he notices the schematics are outdated on what the current rules-of-engagement laws permit. The energy being modifies the explosive to have a more contained blast, avoiding damage to living beings. At least it's cheaper (Cost reduced by 5 scrap)</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-27" max="-23"/>
+		</item_modify>
+		<weapon name="BOMB_1_SAFE_NONLEATHAL"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The Engi in the workshop designs a different payload delivery system where each bomb has a smaller yield, but more bombs are teleported over per activation.</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BOMB_1_SUBMUNITION"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_SMALL_BOMB_REWARD_GOOD">
+	<event>
+		<text>The entire process is automated, and your weapon is built with top-of-the line parts. Surely worth the price!</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-43" max="-47"/>
+		</item_modify>
+		<weapon name="BOMB_1_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The chief engineer seems interested in your project, and decides to tone down on the automation to work on it himself, with the help of a few of his students. It's nearly perfect.</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-43" max="-47"/>
+		</item_modify>
+		<weapon name="BOMB_1_CUSTOM"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>The assembly line's computer has incredible energy routing schematics, and your weapon is built to great power efficiency standards.</text>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BOMB_1_OPTIMIZED"/>
+		<modifyPursuit amount="1"/>
+	</event>-->
+	<event>
+		<text>The engineers have used some new, experimental capacitors that charge way faster, allowing the weapon to charge up more quickly.</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-43" max="-47"/>
+		</item_modify>
+		<weapon name="BOMB_1_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An elderly Engi (do Engi age?) decides your project deserves his special attention. He is an old master, and coordinates the project focusing on a quicker charging weapon.</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-43" max="-47"/>
+		</item_modify>
+		<weapon name="BOMB_1_ADVANCED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The science team working on your project comes up with a prototype they've been wanting to experiment. "This will allow the system to fabricate the payload and cost nearly zero resources. Can we use it?". You agree emphatically.</text>
+		<remove name="BPW_SMALL_BOMB"/>
+		<item_modify>
+			<item type="scrap" min="-43" max="-47"/>
+		</item_modify>
+		<weapon name="BOMB_1_REPLICATOR"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</event>
+<!-- end Small Bomb -->
+
+<!--   Peryton Missiles   -->
+<eventList name="BP_PERYTON_MISSILE_REWARD_BAD">
+	<event>
+		<text>The strange one-eyed humanoid who spent a few hours hunched over with his tools brings your new weapon in an old crate. It looks... Wrong. This didn't work out so well, but you have to pay.</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-17" max="-13"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_SUBSTANDARD"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>They get the blueprint set-up and start working. Their tools are unregulated and outdated, though, and they end up having to do many power inneficient work-arounds.</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-17" max="-13"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_FAULTY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>They used a very old fuel generator for the missile's propulsion system. They'll fly pretty slowly.</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-17" max="-13"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_LOWVELOCITY"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>The alien building your weapon is visibly shaking, probably collateral effect from drugs. He does the job, but nothing is quite well attached.</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-17" max="-13"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_UNRELIABLE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The elderly human builder takes the blueprint from your hand, glances at it and exclaims "Bah! These new schematics are terrible. I'll build it the old fashioned way." Before you can stop him he throws the blueprint away.</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-17" max="-13"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_OUTDATED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with delivery uniform brings a crate to your ship, it's your new weapon. You deposit the money in the workshop's account.</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-17" max="-13"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_PERYTON_MISSILE_REWARD_REG">
+	<event>
+		<text>A computer takes your blueprint and aids the chief-mechanic in the construction process. After some hours, you get your weapon.</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A young engineer supervises the work. She seems really glad to get to work on a bigger project for once. After some time, you get your new weapon.</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with a delivery uniform brings a crate to your ship, it's your new weapon. You transfer over the scrap.</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The blueprint is taken inside and the building process starts. The worker team has people from many species, and they tick together like clockwork. The weapon is built better than the required specifications.</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_VOLATILE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the engineers are system overheating enthusiasts. They add custom-built heatsinks to the project, allowing for higher-temperature blasts.</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_INCENDIARY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The team is supervised by a master weapons builder. He's been in the trade for a very long time, and knows intricacies that even the weapon's original designers wouldn't notice. The work is very well done.</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An "Advanced Power Generation Technology" student requests to aid in the job, so that he can use the data for his End-of-Term project. He offers to pay for some of the job too. (Cost reduced by 3 scrap)</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-29" max="-25"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>A Zoltan is project leader, and he notices the schematics are outdated on what the current rules-of-engagement laws permit. The energy being modifies the explosive to have a more contained blast, avoiding damage to living beings. At least it's cheaper (Cost reduced by 5 scrap)</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-28" max="-24"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_SAFE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the Rock mechanics working on the project add some armor to the warhead, as well as a more powerful propulsion system, that'll allow them to breach the target.</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_PENETRATING"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_PERYTON_MISSILE_REWARD_GOOD">
+	<event>
+		<text>The entire process is automated, and your weapon is built with top-of-the line parts. Surely worth the price!</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-43" max="-47"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The chief engineer seems interested in your project, and decides to tone down on the automation to work on it himself, with the help of a few of his students. It's nearly perfect.</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-43" max="-47"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_CUSTOM"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>The assembly line's computer has incredible energy routing schematics, and your weapon is built to great power efficiency standards.</text>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_OPTIMIZED"/>
+		<modifyPursuit amount="1"/>
+	</event>-->
+	<event>
+		<text>The engineers have used some new, experimental capacitors that charge way faster, allowing the weapon to charge up more quickly.</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-43" max="-47"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An elderly Engi (do Engi age?) decides your project deserves his special attention. He is an old master, and coordinates the project focusing on a quicker charging weapon.</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-43" max="-47"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_ADVANCED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A Mantis engineer! And you thought you had seen everything. He changes modifies the warhead design and adds a secondary explosive, that'll damage their hull way more.</text>
+		<remove name="BPW_PERYTON_MISSILE"/>
+		<item_modify>
+			<item type="scrap" min="-43" max="-47"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_HULL_RIPPER"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</event>
+<!-- end Peryton Missiles -->
+
+<!--   Hull Missiles 1  -->
+<eventList name="BP_HULL_MISSILE_I_REWARD_BAD">
+	<event>
+		<text>The strange one-eyed humanoid who spent a few hours hunched over with his tools brings your new weapon in an old crate. It looks... Wrong. This didn't work out so well, but you have to pay.</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-12" max="-8"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL_SUBSTANDARD"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>They get the blueprint set-up and start working. Their tools are unregulated and outdated, though, and they end up having to do many power inneficient work-arounds.</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-12" max="-8"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL_FAULTY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>They used a very old fuel generator for the missile's propulsion system. They'll fly pretty slowly.</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-12" max="-8"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL_LOWVELOCITY"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>The alien building your weapon is visibly shaking, probably collateral effect from drugs. He does the job, but nothing is quite well attached.</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-12" max="-8"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL_UNRELIABLE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The elderly human builder takes the blueprint from your hand, glances at it and exclaims "Bah! These new schematics are terrible. I'll build it the old fashioned way." Before you can stop him he throws the blueprint away.</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-12" max="-8"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL_OUTDATED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with delivery uniform brings a crate to your ship, it's your new weapon. You deposit the money in the workshop's account.</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-12" max="-8"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_HULL_MISSILE_I_REWARD_REG">
+	<event>
+		<text>A computer takes your blueprint and aids the chief-mechanic in the construction process. After some hours, you get your weapon.</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A young engineer supervises the work. She seems really glad to get to work on a bigger project for once. After some time, you get your new weapon.</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with a delivery uniform brings a crate to your ship, it's your new weapon. You transfer over the scrap.</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The blueprint is taken inside and the building process starts. The worker team has people from many species, and they tick together like clockwork. The weapon is built better than the required specifications.</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL_VOLATILE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the engineers are system overheating enthusiasts. They add custom-built heatsinks to the project, allowing for higher-temperature blasts.</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL_INCENDIARY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The team is supervised by a master weapons builder. He's been in the trade for a very long time, and knows intricacies that even the weapon's original designers wouldn't notice. The work is very well done.</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An "Advanced Power Generation Technology" student requests to aid in the job, so that he can use the data for his End-of-Term project. He offers to pay for some of the job too. (Cost reduced by 3 scrap)</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-19" max="-15"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>A Zoltan is project leader, and he notices the schematics are outdated on what the current rules-of-engagement laws permit. The energy being modifies the explosive to have a more contained blast, avoiding damage to living beings. At least it's cheaper (Cost reduced by 5 scrap)</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-18" max="-14"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL_SAFE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the Rock mechanics working on the project add some armor to the warhead, as well as a more powerful propulsion system, that'll allow them to breach the target.</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL_PENETRATING"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_HULL_MISSILE_I_REWARD_GOOD">
+	<event>
+		<text>The entire process is automated, and your weapon is built with top-of-the line parts. Surely worth the price!</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The chief engineer seems interested in your project, and decides to tone down on the automation to work on it himself, with the help of a few of his students. It's nearly perfect.</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL_CUSTOM"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>The assembly line's computer has incredible energy routing schematics, and your weapon is built to great power efficiency standards.</text>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_PERYTON_OPTIMIZED"/>
+		<modifyPursuit amount="1"/>
+	</event>-->
+	<event>
+		<text>The engineers have used some new, experimental capacitors that charge way faster, allowing the weapon to charge up more quickly.</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An elderly Engi (do Engi age?) decides your project deserves his special attention. He is an old master, and coordinates the project focusing on a quicker charging weapon.</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL_ADVANCED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Contrary to the weapon's original design, the Rock engineer working on your project decides to greatly increase the payload's effectiveness against systems, but this will come at the cost of lower Hull damage.</text>
+		<remove name="BPW_HULL_MISSILE_I"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_MISSILES_HULL_SMALL_SHREDDER"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</event>
+<!-- end Hull Missiles -->
+
+
+<!-- Beams -->
+<!--   Pernach   -->
+<eventList name="BP_PERNACH_REWARD_BAD">
+	<event>
+		<text>The strange one-eyed humanoid who spent a few hours hunched over with his tools brings your new weapon in an old crate. It looks... Wrong. This didn't work out so well, but you have to pay.</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH_SUBSTANDARD"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>They get the blueprint set-up and start working. Their tools are unregulated and outdated, though, and they end up having to do many power inneficient work-arounds.</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH_FAULTY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>The focusing lens they used for your beam weapon is of a lower quality, and can't sustain the high temperatures for long. The fail-safe will kick in earlier, resulting in a shorter beam.</text>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH_SHORT"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>Your beam weapon was built with a terrible targeting re-focuser, the beam would dissipate if it moved too fast. Because of that, it's locked down to a slower pivot.</text>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_SLUGGISH"/>
+		<modifyPursuit amount="1"/>
+	</event>-->
+	<event>
+		<text>The elderly human builder takes the blueprint from your hand, glances at it and exclaims "Bah! These new schematics are terrible. I'll build it the old fashioned way." Before you can stop him he throws the blueprint away.</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH_OUTDATED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with delivery uniform brings a crate to your ship, it's your new weapon. You deposit the money in the workshop's account.</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-22" max="-18"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_PERNACH_REWARD_REG">
+	<event>
+		<text>A computer takes your blueprint and aids the chief-mechanic in the construction process. After some hours, you get your weapon.</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-37" max="-33"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A young engineer supervises the work. She seems really glad to get to work on a bigger project for once. After some time, you get your new weapon.</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-37" max="-33"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with a delivery uniform brings a crate to your ship, it's your new weapon. You transfer over the scrap.</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-37" max="-33"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The blueprint is taken inside and the building process starts. The worker team has people from many species, and they tick together like clockwork. The weapon is built better than the required specifications.</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-37" max="-33"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH_VOLATILE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the engineers are system overheating enthusiasts. They add custom-built heatsinks to the project, allowing for a higher-temperature beam.</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-37" max="-33"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH_INCENDIARY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The team is supervised by a master weapons builder. He's been in the trade for a very long time, and knows intricacies that even the weapon's original designers wouldn't notice. The work is very well done.</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-37" max="-33"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An "Advanced Power Generation Technology" student requests to aid in the job, so that he can use the data for his End-of-Term project. He offers to pay for some of the job too. (Cost reduced by 3 scrap)</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-35" max="-30"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>A Zoltan is project leader, and he notices the schematics are outdated on what the current rules-of-engagement laws permit. The energy being calibrates the weapon to have a more coherent blast, avoiding damage to living beings. At least it's cheaper (Cost reduced by 5 scrap)</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-34" max="-29"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH_SAFE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The engineering team improves the schematics, making the beam better focused. The beam will be able to cut holes open into the inside of the ship.</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-37" max="-33"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH_BREACHING_BEAM"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_PERNACH_REWARD_GOOD">
+	<event>
+		<text>The entire process is automated, and your weapon is built with top-of-the line parts. Surely worth the price!</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The chief engineer seems interested in your project, and decides to tone down on the automation to work on it himself, with the help of a few of his students. It's nearly perfect.</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH_CUSTOM"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>The assembly line's computer has incredible energy routing schematics, and your weapon is built to great power efficiency standards.</text>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_OPTIMIZED"/>
+		<modifyPursuit amount="1"/>
+	</event>-->
+	<event>
+		<text>The engineers have used some new, experimental capacitors that charge way faster, allowing the weapon to charge up more quickly.</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An elderly Engi (do Engi age?) decides your project deserves his special attention. He is an old master, and coordinates the project focusing on a quicker charging weapon.</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH_ADVANCED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A Mantis engineer! And you thought you had seen everything. He changes the energy pattern from the default one on the blueprint, making the beam more damaging to the target's hull.</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH_HULL_RIPPER"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>Your new weapon is built with a more equalized energy output, which allows the beam to be more stable, and fire for longer.</text>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_EXTENDED"/>
+		<modifyPursuit amount="1"/>
+	</event>-->
+	<event>
+		<text>The chief engineer has decided to change the beam's wavelength to one that isn't as hot, but easily destroys the shielding on specialized systems. It won't cause as much hull damage, but systems will go down quickly.</text>
+		<remove name="BPW_PERNACH"/>
+		<item_modify>
+			<item type="scrap" min="-52" max="-48"/>
+		</item_modify>
+		<weapon name="BA_BEAM_PERNACH_TACTICAL"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</event>
+<!-- end Pernach -->
+
+<!--   Bardiche   -->
+<eventList name="BP_BARDICHE_REWARD_BAD">
+	<event>
+		<text>The strange one-eyed humanoid who spent a few hours hunched over with his tools brings your new weapon in an old crate. It looks... Wrong. This didn't work out so well, but you have to pay.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_SUBSTANDARD"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>They get the blueprint set-up and start working. Their tools are unregulated and outdated, though, and they end up having to do many power inneficient work-arounds.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_FAULTY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The focusing lens they used for your beam weapon is of a lower quality, and can't sustain the high temperatures for long. The fail-safe will kick in earlier, resulting in a shorter beam.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_SHORT"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>Your beam weapon was built with a terrible targeting re-focuser, the beam would dissipate if it moved too fast. Because of that, it's locked down to a slower pivot.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_SLUGGISH"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The elderly human builder takes the blueprint from your hand, glances at it and exclaims "Bah! These new schematics are terrible. I'll build it the old fashioned way." Before you can stop him he throws the blueprint away.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_OUTDATED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with delivery uniform brings a crate to your ship, it's your new weapon. You deposit the money in the workshop's account.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_BARDICHE_REWARD_REG">
+	<event>
+		<text>A computer takes your blueprint and aids the chief-mechanic in the construction process. After some hours, you get your weapon.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A young engineer supervises the work. She seems really glad to get to work on a bigger project for once. After some time, you get your new weapon.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with a delivery uniform brings a crate to your ship, it's your new weapon. You transfer over the scrap.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The blueprint is taken inside and the building process starts. The worker team has people from many species, and they tick together like clockwork. The weapon is built better than the required specifications.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_VOLATILE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the engineers are system overheating enthusiasts. They add custom-built heatsinks to the project, allowing for a higher-temperature beam.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_INCENDIARY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The team is supervised by a master weapons builder. He's been in the trade for a very long time, and knows intricacies that even the weapon's original designers wouldn't notice. The work is very well done.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An "Advanced Power Generation Technology" student requests to aid in the job, so that he can use the data for his End-of-Term project. He offers to pay for some of the job too. (Cost reduced by 3 scrap)</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-45" max="-40"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>A Zoltan is project leader, and he notices the schematics are outdated on what the current rules-of-engagement laws permit. The energy being calibrates the weapon to have a more coherent blast, avoiding damage to living beings. At least it's cheaper (Cost reduced by 5 scrap)</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-44" max="-39"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_SAFE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The engineering team improves the schematics, making the beam better focused. The beam will be able to cut holes open into the inside of the ship.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_BREACHING_BEAM"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_BARDICHE_REWARD_GOOD">
+	<event>
+		<text>The entire process is automated, and your weapon is built with top-of-the line parts. Surely worth the price!</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The chief engineer seems interested in your project, and decides to tone down on the automation to work on it himself, with the help of a few of his students. It's nearly perfect.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_CUSTOM"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>The assembly line's computer has incredible energy routing schematics, and your weapon is built to great power efficiency standards.</text>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_OPTIMIZED"/>
+		<modifyPursuit amount="1"/>
+	</event>-->
+	<event>
+		<text>The engineers have used some new, experimental capacitors that charge way faster, allowing the weapon to charge up more quickly.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An elderly Engi (do Engi age?) decides your project deserves his special attention. He is an old master, and coordinates the project focusing on a quicker charging weapon.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_ADVANCED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A Mantis engineer! And you thought you had seen everything. He changes the energy pattern from the default one on the blueprint, making the beam more damaging to the target's hull.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_HULL_RIPPER"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Your new weapon is built with a more equalized energy output, which allows the beam to be more stable, and fire for longer.</text>
+		<remove name="BPW_BARDICHE"/>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_EXTENDED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</event>
+<!-- end Bardiche -->
+
+<!--   Bardiche   -->
+<eventList name="BP_PIKE_REWARD_BAD">
+	<event>
+		<text>The strange one-eyed humanoid who spent a few hours hunched over with his tools brings your new weapon in an old crate. It looks... Wrong. This didn't work out so well, but you have to pay.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-27" max="-23"/>
+		</item_modify>
+		<weapon name="BEAM_LONG_SUBSTANDARD"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>They get the blueprint set-up and start working. Their tools are unregulated and outdated, though, and they end up having to do many power inneficient work-arounds.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-27" max="-23"/>
+		</item_modify>
+		<weapon name="BEAM_LONG_FAULTY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The focusing lens they used for your beam weapon is of a lower quality, and can't sustain the high temperatures for long. The fail-safe will kick in earlier, resulting in a shorter beam.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-27" max="-23"/>
+		</item_modify>
+		<weapon name="BEAM_LONG_SHORT"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>Your beam weapon was built with a terrible targeting re-focuser, the beam would dissipate if it moved too fast. Because of that, it's locked down to a slower pivot.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-27" max="-23"/>
+		</item_modify>
+		<weapon name="BEAM_LONG_SLUGGISH"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The elderly human builder takes the blueprint from your hand, glances at it and exclaims "Bah! These new schematics are terrible. I'll build it the old fashioned way." Before you can stop him he throws the blueprint away.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-27" max="-23"/>
+		</item_modify>
+		<weapon name="BEAM_LONG_OUTDATED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with delivery uniform brings a crate to your ship, it's your new weapon. You deposit the money in the workshop's account.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-27" max="-23"/>
+		</item_modify>
+		<weapon name="BEAM_LONG"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_PIKE_REWARD_REG">
+	<event>
+		<text>A computer takes your blueprint and aids the chief-mechanic in the construction process. After some hours, you get your weapon.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BEAM_LONG"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A young engineer supervises the work. She seems really glad to get to work on a bigger project for once. After some time, you get your new weapon.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BEAM_LONG"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with a delivery uniform brings a crate to your ship, it's your new weapon. You transfer over the scrap.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BEAM_LONG"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The blueprint is taken inside and the building process starts. The worker team has people from many species, and they tick together like clockwork. The weapon is built better than the required specifications.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BEAM_LONG"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the engineers are system overheating enthusiasts. They add custom-built heatsinks to the project, allowing for a higher-temperature beam.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BEAM_LONG_INCENDIARY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The team is supervised by a master weapons builder. He's been in the trade for a very long time, and knows intricacies that even the weapon's original designers wouldn't notice. The work is very well done.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BEAM_LONG_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An "Advanced Power Generation Technology" student requests to aid in the job, so that he can use the data for his End-of-Term project. He offers to pay for some of the job too. (Cost reduced by 3 scrap)</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-39" max="-35"/>
+		</item_modify>
+		<weapon name="BEAM_LONG_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>A Zoltan is project leader, and he notices the schematics are outdated on what the current rules-of-engagement laws permit. The energy being calibrates the weapon to have a more coherent blast, avoiding damage to living beings. At least it's cheaper (Cost reduced by 5 scrap)</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-37" max="-33"/>
+		</item_modify>
+		<weapon name="BEAM_LONG_SAFE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The engineering team improves the schematics, making the beam better focused. The beam will be able to cut holes open into the inside of the ship.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BEAM_LONG_BREACHING_BEAM"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_PIKE_REWARD_GOOD">
+	<event>
+		<text>The entire process is automated, and your weapon is built with top-of-the line parts. Surely worth the price!</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-57" max="-53"/>
+		</item_modify>
+		<weapon name="BEAM_LONG_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The chief engineer seems interested in your project, and decides to tone down on the automation to work on it himself, with the help of a few of his students. It's nearly perfect.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-57" max="-53"/>
+		</item_modify>
+		<weapon name="BEAM_LONG_CUSTOM"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>The assembly line's computer has incredible energy routing schematics, and your weapon is built to great power efficiency standards.</text>
+		<item_modify>
+			<item type="scrap" min="-57" max="-53"/>
+		</item_modify>
+		<weapon name="BA_BEAM_BARDICHE_OPTIMIZED"/>
+		<modifyPursuit amount="1"/>
+	</event>-->
+	<event>
+		<text>The engineers have used some new, experimental capacitors that charge way faster, allowing the weapon to charge up more quickly.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-57" max="-53"/>
+		</item_modify>
+		<weapon name="BEAM_LONG_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An elderly Engi (do Engi age?) decides your project deserves his special attention. He is an old master, and coordinates the project focusing on a quicker charging weapon.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-57" max="-53"/>
+		</item_modify>
+		<weapon name="BEAM_LONG_ADVANCED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A Mantis engineer! And you thought you had seen everything. He changes the energy pattern from the default one on the blueprint, making the beam more damaging to the target's hull.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-57" max="-53"/>
+		</item_modify>
+		<weapon name="BEAM_LONG_HULL_RIPPER"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Your new weapon is built with a more equalized energy output, which allows the beam to be more stable, and fire for longer.</text>
+		<remove name="BPW_PIKE"/>
+		<item_modify>
+			<item type="scrap" min="-57" max="-53"/>
+		</item_modify>
+		<weapon name="BEAM_LONG_EXTENDED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</event>
+<!-- end Bardiche -->
+
+
+
+<!-- Special -->
+<!-- Effector 2 -->
+<eventList name="BP_EFFECTOR_II_REWARD_BAD">
+	<event>
+		<text>The strange one-eyed humanoid who spent a few hours hunched over with his tools brings your new weapon in an old crate. It looks... Wrong. This didn't work out so well, but you have to pay.</text>
+		<remove name="BPW_EFFECTOR_II"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_EFFECTOR_2_SUBSTANDARD"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>They get the blueprint set-up and start working. Their tools are unregulated and outdated, though, and they end up having to do many power inneficient work-arounds.</text>
+		<remove name="BPW_EFFECTOR_II"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_EFFECTOR_2_FAULTY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>The building process is behind closed doors. After a while, you notice a smell of something burnt. This doesn't look good.</text>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_MALFUNCTIONING"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<event>
+		<text>The alien building your weapon is visibly shaking, probably collateral effect from drugs. He does the job, but nothing is quite well attached.</text>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_UNRELIABLE"/>
+		<modifyPursuit amount="1"/>
+	</event> -->
+	<event>
+		<text>The elderly human builder takes the blueprint from your hand, glances at it and exclaims "Bah! These new schematics are terrible. I'll build it the old fashioned way." Before you can stop him he throws the blueprint away.</text>
+		<remove name="BPW_EFFECTOR_II"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_EFFECTOR_2_OUTDATED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with delivery uniform brings a crate to your ship, it's your new weapon. You deposit the money in the workshop's account.</text>
+		<remove name="BPW_EFFECTOR_II"/>
+		<item_modify>
+			<item type="scrap" min="-32" max="-28"/>
+		</item_modify>
+		<weapon name="BA_EFFECTOR_2"/>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+<eventList name="BP_EFFECTOR_II_REWARD_REG">
+	<event>
+		<text>A computer takes your blueprint and aids the chief-mechanic in the construction process. After some hours, you get your weapon.</text>
+		<remove name="BPW_EFFECTOR_II"/>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_EFFECTOR_2"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>A young engineer supervises the work. She seems really glad to get to work on a bigger project for once. After some time, you get your new weapon.</text>
+		<remove name="BPW_EFFECTOR_II"/>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_EFFECTOR_2"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The doors close and you don't get a chance to watch the building process. After a few hours, a Rock Man with a delivery uniform brings a crate to your ship, it's your new weapon. You transfer over the scrap.</text>
+		<remove name="BPW_EFFECTOR_II"/>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_EFFECTOR_2"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>The blueprint is taken inside and the building process starts. The worker team has people from many species, and they tick together like clockwork. The weapon is built better than the required specifications.</text>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_VOLATILE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the engineers are system overheating enthusiasts. They add custom-built heatsinks to the project, allowing for higher-temperature blasts. </text>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_INCENDIARY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The team is supervised by a master weapons builder. He's been in the trade for a very long time, and knows intricacies that even the weapon's original designers wouldn't notice. The work is very well done.</text>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_EFFECTOR_2_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>-->
+	<event>
+		<text>An "Advanced Power Generation Technology" student requests to aid in the job, so that he can use the data for his End-of-Term project. He offers to pay for some of the job too. (Cost reduced by 5 scrap)</text>
+		<remove name="BPW_EFFECTOR_II"/>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BA_EFFECTOR_2_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>	
+	<!--<event>
+		<text>A Zoltan is project leader, and he notices the schematics are outdated on what the current rules-of-engagement laws permit. The energy being calibrates the weapon to have a more coherent blast, avoiding damage to living beings. At least it's cheaper (Cost reduced by 5 scrap)</text>
+		<item_modify>
+			<item type="scrap" min="-37" max="-33"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_SAFE"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>Some of the Rock mechanics working on the project know a trick that speeds up the shots and avoid loss of coherence when hitting the target, causing a penetrating blow.</text>
+		<item_modify>
+			<item type="scrap" min="-47" max="-43"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_PENETRATING"/>
+		<modifyPursuit amount="1"/>
+	</event>-->
+</eventList>
+
+<eventList name="BP_EFFECTOR_II_REWARD_GOOD">
+	<!--<event>
+		<text>The entire process is automated, and your weapon is built with top-of-the line parts. Surely worth the price!</text>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BA_EFFECTOR_2_QUALITY"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The chief engineer seems interested in your project, and decides to tone down on the automation to work on it himself, with the help of a few of his students. It's nearly perfect.</text>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_CUSTOM"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>The assembly line's computer has incredible energy routing schematics, and your weapon is built to great power efficiency standards.</text>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BA_EFFECTOR_2_OPTIMIZED"/>
+		<modifyPursuit amount="1"/>
+	</event>-->
+	<event>
+		<text>The engineers have used some new, experimental capacitors that charge way faster, allowing the weapon to charge up more quickly.</text>
+		<remove name="BPW_EFFECTOR_II"/>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="BA_EFFECTOR_2_UPGRADED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<event>
+		<text>An elderly Engi (do Engi age?) decides your project deserves his special attention. He is an old master, and coordinates the project focusing on a quicker charging weapon.</text>
+		<remove name="BPW_EFFECTOR_II"/>
+		<item_modify>
+			<item type="scrap" min="-62" max="-58"/>
+		</item_modify>
+		<weapon name="BA_EFFECTOR_2_ADVANCED"/>
+		<modifyPursuit amount="1"/>
+	</event>
+	<!--<event>
+		<text>A Mantis engineer! And you thought you had seen everything. He changes the energy pattern from the default one on the blueprint, making the blasts more damaging to the targets hull.</text>
+		<item_modify>
+			<item type="scrap" min="-42" max="-38"/>
+		</item_modify>
+		<weapon name="BA_LASER_AUTO_2_HULL_RIPPER"/>
+		<modifyPursuit amount="1"/>
+	</event>-->
+</event>
+<!-- end Effector 2 -->
+
+<eventList name="BP_RANDOM_WEAPON">
+	<event>
+		<text>The blueprint data is securely installed in your ship's data banks.</text>
+		<augment name="BPW_BURST_LASER_II"/>		
+	</event>
+	<event>
+		<text>The blueprint data is securely installed in your ship's data banks.</text>
+		<augment name="BPW_PERYTON_MISSILE"/>		
+	</event>
+	<event>
+		<text>The blueprint data is securely installed in your ship's data banks.</text>
+		<augment name="BPW_AUTO_LASER_II"/>		
+	</event>
+	<event>
+		<text>The blueprint data is securely installed in your ship's data banks.</text>
+		<augment name="BPW_HEAVY_ION_II"/>		
+	</event>
+	<event>
+		<text>The blueprint data is securely installed in your ship's data banks.</text>
+		<augment name="BPW_ION_BLAST"/>		
+	</event>
+	<event>
+		<text>The blueprint data is securely installed in your ship's data banks.</text>
+		<augment name="BPW_EFFECTOR_II"/>		
+	</event>
+	<event>
+		<text>The blueprint data is securely installed in your ship's data banks.</text>
+		<augment name="BPW_SMALL_BOMB"/>		
+	</event>
+	<event>
+		<text>The blueprint data is securely installed in your ship's data banks.</text>
+		<augment name="BPW_ARTILLERY_LASER_I"/>		
+	</event>
+	<event>
+		<text>The blueprint data is securely installed in your ship's data banks.</text>
+		<augment name="BPW_HULL_MISSILE_I"/>		
+	</event>
+	<event>
+		<text>The blueprint data is securely installed in your ship's data banks.</text>
+		<augment name="BPW_PERNACH"/>		
+	</event>
+	<event>
+		<text>The blueprint data is securely installed in your ship's data banks.</text>
+		<augment name="BPW_PIKE"/>		
+	</event>
+	<event>
+		<text>The blueprint data is securely installed in your ship's data banks.</text>
+		<augment name="BPW_BARDICHE"/>		
+	</event>
+</eventList>
+
+
+
+
+<eventList name="BP_LABORATORY_ASTEROID_EXPLORE">
+	<event>
+		<text>You find a weapon's blueprint and bring it back into your ship</text>
+		<choice>
+			<text>Continue...</text>
+			<event load="BP_RANDOM_WEAPON"/>
+		</choice>
+	</event>
+	<event>
+		<text>It was an ambush! As soon as you dock, a group of pirates board your ship through the docking ring!</text>
+		<boarders min="2" max="4" class="random"/>	
+	</event>
+</eventList>
+
+<eventList name="BP_LOOT_DEAD_CREW">
+	<event>
+		<text>You find a weapon's blueprint and bring it back into your ship</text>
+		<choice>
+			<text>Continue...</text>
+			<event load="BP_RANDOM_WEAPON"/>
+		</choice>
+	</event>
+</eventList>
+
+<eventList name="BP_RANDOM_BEAM_WEAPON">
+	<event>
+		<augment name="BPW_PERNACH"/>
+	</event>
+	<event>
+		<augment name="BPW_BARDICHE"/>
+	</event>	
+	<event>
+		<augment name="BPW_PIKE"/>
+	</event>
+</eventList>
+
+<eventList name="BP_RANDOM_EXPLOSIVE_WEAPON">
+	<event>
+		<augment name="BPW_HULL_MISSILE_I"/>
+	</event>
+	<event>
+		<augment name="BPW_PERYTON_MISSILE"/>
+	</event>
+	<event>
+		<augment name="BPW_SMALL_BOMB"/>
+	</event>
+</eventList>
+
+
+<!--<mod:findName type="event" name="CE_CIVILIAN_TRADER">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>-->
+
+<mod:findName type="event" name="CIVILIAN_TRADE_DEPOT">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>
+
+<mod:findName type="eventList" name="NEUTRAL_DEEP_SPACE">
+	<mod-append:event>
+		<ship load="BS_CIRCLE_DRONE" hostile="false"/>
+		<text>You find an Engi research and development facility. They offer to sell you some blueprints.</text>
+		<choice>
+			<text>Ask for a weapon blueprint</text>
+			<item_modify>
+				<item type="scrap" min="-40" max="-30"/>
+			</item_modify>
+			<event load="BP_RANDOM_WEAPON"/>			
+		</choice>
+		<!--<choice req="engi">
+			<text>(Engi Crew) Have your Engi negotiate for a more specific blueprint option.</text>
+			<event>
+				<choice>					
+					<text>Ask for a Beam Weapon.</text>
+					<item type="scrap" min="-35" max="-25"/>
+					<event load="BP_RANDOM_BEAM_WEAPON"/>			
+				</choice>
+				<choice>					
+					<text>Ask for a Laser Weapon.</text>
+					<item type="scrap" min="-35" max="-25"/>
+					<event load="BP_RANDOM_LASER_WEAPON"/>			
+				</choice>
+				<choice>					
+					<text>Ask for a Laser or Ion Weapon.</text>
+					<item type="scrap" min="-35" max="-25"/>
+					<event load="BP_RANDOM_LASER_WEAPON"/>			
+				</choice>
+				<choice>					
+					<text>Ask for a Bomb or Missile Weapon.</text>
+					<item type="scrap" min="-35" max="-25"/>
+					<event load="BP_RANDOM_MISSILE_WEAPON"/>			
+				</choice>
+			</event>
+		</choice>-->
+		<choice>
+			<text>Continue...</text>
+			<event/>
+		</choice>
+	</mod-append:event>
+</mod:findName>
+
+<mod:findName type="event" name="STORE">
+  	<mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+    	<text>(Weapon Blueprint) Have a weapon built.</text>
+	  	<event load="BP_WEAPONS_BUILDER_CHOICE"/>
+	</mod-append:choice>  
+</mod:findName>
+
+<!--
+<mod:findName type="event" name="STORE_CLEARING">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>
+
+<mod:findName type="event" name="STORE_HAZARD">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>
+
+<mod:findName type="event" name="STORE_INDUSTRIAL">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>
+
+<mod:findName type="event" name="NEBULA_STORE">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>
+
+
+<mod:findName type="event" name="STORE_OUTLAW">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>
+
+<mod:findName type="event" name="STORE_FED">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>
+
+<mod:findName type="event" name="STORE_ENGI">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>
+
+<mod:findName type="event" name="STORE_OUTLAW_TRAP">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>
+
+<mod:findName type="event" name="STORE_MANTIS">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>
+
+<mod:findName type="event" name="STORE_ZOLTAN">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>
+
+<mod:findName type="event" name="STORE_ROCK">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>
+
+<mod:findName type="event" name="STORE_LANIUS">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>-->
+
+<mod:findName type="eventList" name="ITEMS_CIVILIAN">
+	<mod-append:event>
+		<text>You find what looks like an old weapons testing facility. A quick scan lets you collect some blueprint data.</text>
+		<choice>
+			<text>Continue...</text>
+			<event load="BP_RANDOM_WEAPON"/>
+		</choice>
+	</mod-append:event>
+</mod:findName>
+
+<mod:findName type="eventList" name="ASTEROID_EXPLORE_RESULTS">
+  <mod-append:event>
+      <text>You discover an abandoned military laboratory built within a larger asteroid.</text>
+	  <environment type="asteroid"/>
+	  <choice hidden="true">
+		<text>Dock to explore the laboratory.</text>
+		<ship load="BS_PIRATE_ASTEROID" hostile="false"/>
+		<event load="BP_LABORATORY_ASTEROID_EXPLORE"/>
+	  </choice>
+    </mod-append:event>  
+</mod:findName>
+
+<mod:findName type="eventList" name="DEAD_CREW_DEFAULT">
+	<mod-append:event>
+		<text>There are no more life signs remaining on the ship. Checking their computer systems, it looks like there are some blueprints in their databanks.</text>
+		<status type="limit" target="enemy" system="artillery" amount="0"/>
+		<autoReward level="LOW">standard</autoReward>
+		<status type="clear" target="player" system="weapons" amount="100"/>
+		<status type="clear" target="player" system="shields" amount="100"/>
+		<status type="clear" target="player" system="medbay" amount="100"/>
+		<status type="clear" target="player" system="oxygen" amount="100"/>
+		<status type="clear" target="player" system="doors" amount="100"/>
+		<status type="clear" target="player" system="engines" amount="100"/>
+		<status type="clear" target="player" system="pilot" amount="100"/>
+		<status type="clear" target="player" system="cloaking" amount="100"/>
+		<status type="clear" target="player" system="drones" amount="100"/>
+		<status type="clear" target="player" system="teleporter" amount="100"/>
+		<status type="clear" target="player" system="mind" amount="100"/>
+
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="BP_LOOT_DEAD_CREW"/>
+		</choice>
+	</mod-append:event>
+</mod:findName>
+
+<mod:findName type="eventList" name="BS_DEAD_CREW_DEFAULT">
+	<mod-append:event>
+		<text>There are no more life signs remaining on the ship. Checking their computer systems, it looks like there are some blueprints in their databanks.</text>
+		<status type="limit" target="enemy" system="artillery" amount="0"/>
+		<autoReward level="LOW">standard</autoReward>
+		<status type="clear" target="player" system="weapons" amount="100"/>
+		<status type="clear" target="player" system="shields" amount="100"/>
+		<status type="clear" target="player" system="medbay" amount="100"/>
+		<status type="clear" target="player" system="oxygen" amount="100"/>
+		<status type="clear" target="player" system="doors" amount="100"/>
+		<status type="clear" target="player" system="engines" amount="100"/>
+		<status type="clear" target="player" system="pilot" amount="100"/>
+		<status type="clear" target="player" system="cloaking" amount="100"/>
+		<status type="clear" target="player" system="drones" amount="100"/>
+		<status type="clear" target="player" system="teleporter" amount="100"/>
+		<status type="clear" target="player" system="mind" amount="100"/>
+
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="BP_LOOT_DEAD_CREW"/>
+		</choice>
+	</mod-append:event>
+</mod:findName>
+
+<mod:findName type="eventList" name="CE_RESEARCH">
+	<mod-append:event>
+		<text>Your Research And Development team uses the laboratory to design a weapon blueprint.</text>
+		<choice>
+			<text>Continue...</text>
+			<event load="BP_RANDOM_WEAPON"/>
+		</choice>
+	</mod-append:event>
+</mod:findName>
+
+<mod:findName type="eventList" name="CE_CONVERSATION_AI_UPGRADES">
+	<mod-append:event>
+		<text>"I have examined our combat logs and weapons systems and decided to design a weapon we can use in future engagements. Here are the blueprints."</text>
+		<choice>
+			<text>Continue...</text>
+			<event load="BP_RANDOM_WEAPON"/>
+		</choice>
+	</mod-append:event>
+</mod:findName>
+
+<mod:findName type="eventList" name="DEAD_CREW_PIRACY_CIVILIAN_RESULTS_STATION">
+	<mod-append:event>
+		<text>Everything is silent. During the heat of the battle, the crew fought without much remorse, but now that adrenaline is wearing off, a gloom mood takes the ship. You do the routine post-battle checks of the enemy station and find some blueprint data, as well as resources.</text>
+		<choice>
+			<text>Continue...</text>
+			<autoReward level="LOW">standard</autoReward>
+			<event load="BP_RANDOM_WEAPON"/>
+		</choice>
+	</mod-append:event>
+</mod:findName>
+
+<mod:findName type="eventList" name="DEAD_CREW_PIRACY_CIVILIAN_RESULTS_RISKLESS_STATION">
+	<mod-append:event>
+		<text>Your crew knows what they've signed up for. After scouring the station for loot, they bring in some blueprint data they've located.</text>
+		<choice>
+			<text>Continue...</text>
+			<autoReward level="LOW">standard</autoReward>
+			<event load="BP_RANDOM_WEAPON"/>
+		</choice>
+	</mod-append:event>
+</mod:findName>
+
+<mod:findName type="eventList" name="CE_DERELICT_TREASURE_REWARD">
+	<mod-append:event>
+		<text>You find some weapon schematics in the wreck's databanks!</text>
+		<choice>
+			<text>Continue...</text>
+			<event load="BP_RANDOM_WEAPON"/>
+		</choice>
+	</mod-append:event>
+</mod:findName>
+
+ 
+ <mod:findName type="eventList" name="SAVE_ENGI_ENGINEER_LIST">
+	<mod-append:event>
+		<text>The Engi engineers thank you and send over the data for a weapon they were developing.</text>
+		<choice hidden="true">
+			<text>Continue...</text>
+			<event load="BP_RANDOM_WEAPON"/>
+		</choice>
+	</mod-append:event>
+</mod:findName>
+
+

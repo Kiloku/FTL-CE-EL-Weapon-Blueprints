@@ -1,0 +1,27 @@
+<mod:findName type="event" name="NEBULA_STORE">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>
+
+<mod:findName type="event" name="STORE_INDUSTRIAL">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>
+
+<mod:findName type="event" name="STORE_HAZARD">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>
+
+<mod:findName type="event" name="STORE_CLEARING">
+  <mod-append:choice req="BP_AUGMENTS_WEAPONS" hidden="true">
+      <text>(Weapon Blueprint) Have a weapon built.</text>
+	  <event load="BP_WEAPONS_BUILDER_CHOICE"/>
+    </mod-append:choice>  
+</mod:findName>

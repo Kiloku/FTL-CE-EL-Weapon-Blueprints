@@ -1,0 +1,127 @@
+<!-- Kiloku's Blueprint Crafting Add-on -->
+<blueprintList name="BP_AUGMENTS_WEAPONS">
+	<name>BPW_BURST_LASER_II</name>
+	<name>BPW_PERYTON_MISSILE</name>
+	<name>BPW_AUTO_LASER_II</name>
+	<name>BPW_HEAVY_ION_II</name>
+	<name>BPW_ION_BLAST</name>
+	<name>BPW_EFFECTOR_II</name>
+	<name>BPW_SMALL_BOMB</name>
+	<name>BPW_ARTILLERY_LASER_I</name>
+	<name>BPW_HULL_MISSILE_I</name>
+	<name>BPW_PERNACH</name>
+	<name>BPW_PIKE</name>
+	<name>BPW_BARDICHE</name>
+</blueprintList>
+
+<augBlueprint name="BPW_BURST_LASER_II">
+	<title>Burst Laser II BP.</title>
+	<desc>Blueprints for making a Burst Laser II Weapon.</desc>
+	<cost>0</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.0</value>
+</augBlueprint>
+<augBlueprint name="BPW_PERYTON_MISSILE">
+	<title>Peryton Missiles BP.</title>
+	<desc>Blueprints for making a Peryton Missile Weapon.</desc>
+	<cost>0</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.0</value>
+</augBlueprint>
+<augBlueprint name="BPW_AUTO_LASER_II">
+	<title>Auto Laser II BP.</title>
+	<desc>Blueprints for making an Auto Laser Weapon.</desc>
+	<cost>0</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.0</value>
+</augBlueprint>
+<augBlueprint name="BPW_HEAVY_ION_II">
+	<title>Heavy Ion II BP.</title>
+	<desc>Blueprints for making a Heavy Ion II Weapon.</desc>
+	<cost>0</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.0</value>
+</augBlueprint>
+<augBlueprint name="BPW_ION_BLAST">
+	<title>Ion Blast BP.</title>
+	<desc>Blueprints for making an Ion Blast Weapon.</desc>
+	<cost>0</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.0</value>
+</augBlueprint>
+<augBlueprint name="BPW_EFFECTOR_II">
+	<title>Effector II BP.</title>
+	<desc>Blueprints for making an Effector II Weapon.</desc>
+	<cost>0</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.0</value>
+</augBlueprint>
+<augBlueprint name="BPW_SMALL_BOMB">
+	<title>Small Bomb BP.</title>
+	<desc>Blueprints for making a Small Bomb Weapon.</desc>
+	<cost>0</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.0</value>
+</augBlueprint>
+<augBlueprint name="BPW_ARTILLERY_LASER_I">
+	<title>Artillery Laser I BP.</title>
+	<desc>Blueprints for making an Artillery Laser I Weapon.</desc>
+	<cost>0</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.0</value>
+</augBlueprint>
+<augBlueprint name="BPW_HULL_MISSILE_I">
+	<title>Hull Missile I BP.</title>
+	<desc>Blueprints for making a Hull Missile I Weapon.</desc>
+	<cost>0</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.0</value>
+</augBlueprint>
+<augBlueprint name="BPW_PERNACH">
+	<title>Pernach Beam BP.</title>
+	<desc>Blueprints for making a Pernach Beam Weapon.</desc>
+	<cost>0</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.0</value>
+</augBlueprint>
+<augBlueprint name="BPW_PIKE">
+	<title>Pike Beam BP.</title>
+	<desc>Blueprints for making a Pike Beam Weapon.</desc>
+	<cost>0</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.0</value>
+</augBlueprint>
+<augBlueprint name="BPW_BARDICHE">
+	<title>Bardiche Beam BP.</title>
+	<desc>Blueprints for making a Bardiche Beam Weapon.</desc>
+	<cost>0</cost>
+	<bp>15</bp>
+	<rarity>0</rarity>
+	<stackable>true</stackable>
+	<value>0.0</value>
+</augBlueprint>
+<!--
+   
+<!-- No more Blueprint Crafting -->
